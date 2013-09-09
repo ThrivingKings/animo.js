@@ -129,27 +129,30 @@
 
       }
 
-      var $me = this;
+      var $me = this, _cb = callback;
+
+      if($me.queue.length>1) {
+        _cb = null;
+      }
 
       // Listen for the end of the animation
       this._end("AnimationEnd", function() {
 
         // If there are more, clean it up and move on
-      	if($me.element.hasClass($me.queue[0])) {
+        if($me.element.hasClass($me.queue[0])) {
 
-	    		if(!$me.options.keep) {
+          if(!$me.options.keep) {
             $me.cleanse();
           }
 
-	    		$me.queue.shift();
+          $me.queue.shift();
 
-		      if($me.queue.length) {
+          if($me.queue.length) {
 
-		      	$me.animate();
-            return;
-		      }
-			  }
-		  }, callback);
+            $me.animate(callback);
+          }
+        }
+      }, _cb);
     },
 
     cleanse: function() {

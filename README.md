@@ -5,7 +5,7 @@ A powerful little tool for managing CSS animations. Stack animations, create cro
 
 Full article and demos - http://labs.bigroomstudios.com/libraries/animo-js
 
-##License
+###License
 All code is open source and licensed under MIT. Check the individual licenses for more information.
 
 ###Change log

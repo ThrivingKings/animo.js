@@ -15,7 +15,8 @@
     	animation: null,
     	iterate: 1,
     	timing: "linear",
-      keep: false
+      	keep: false,
+      	cleanse: true
     };
 
     // Browser prefixes for CSS
@@ -100,8 +101,10 @@
       } else {
 	      $me.queue.push($me.options.animation);
 	    }
-
-	    $me.cleanse();
+	    
+	    if ( $me.options.cleanse ) {
+	    	$me.cleanse();
+	    }
 
 	    $me.animate(callback);
       

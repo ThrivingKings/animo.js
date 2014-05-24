@@ -293,6 +293,26 @@
       var binding = type.toLowerCase()+" webkit"+type+" o"+type+" MS"+type;
 
       this.element.bind(binding, function() {
+
+        // Binding also effect child element, need to check if element is in list 
+        //   of $me.element or else it will call callback right away
+        //   Ex:
+        //   <div class="parent"><div class="child"></div></div>
+        //   $(".child").animo({animation: "fadeOut", duration: 1.0}, function(){
+        //    $(".parent").animo({animation: "fadeOut", duration: 1.0}, function(){
+        //      //This callback will be called right away because child animatedEnd also trigger parent binding
+        //    });
+        //   });
+        in_list = false;
+        for (var i = 0; i < $me.element.length; i++) {
+          if ($me.element[i] == e.target) {
+            in_list = true;
+            break;
+          }
+        }
+        if (!in_list) {
+          return;
+        }
         
         $me.element.unbind(binding);
 

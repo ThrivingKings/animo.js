@@ -5,7 +5,7 @@
    * Modern browsers and almost all mobile browsers support CSS animations (http://caniuse.com/css-animation).
    *
    * @author Daniel Raftery : twitter/ThrivingKings
-   * @version 1.0.2
+   * @version 1.0.3
   */
   function animo( element, options, callback, other_cb ) {
     

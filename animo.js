@@ -281,7 +281,7 @@
       // Add the options for each prefix
       while(ai--) {
 
-        this.element.css(this.prefixes[ai]+"transition", "all "+this.options.duration+"s linear");
+        this.element.css(this.prefixes[ai]+"transition", "all "+this.options.duration+"s "+this.options.timing);
 
         this.element.css(this.prefixes[ai]+"transform", "rotate("+this.options.degrees+"deg)");
 

@@ -1,0 +1,26 @@
+{
+  "name": "animo",
+  "main": "animo.js",
+  "version": "1.0.3",
+  "homepage": "https://github.com/ThrivingKings/animo.js",
+  "authors": [
+    "Daniel Raftery <danielraftery00@gmail.com>"
+  ],
+  "description": "A powerful little tool for managing CSS animations",
+  "keywords": [
+    "animo",
+    "animate",
+    "css",
+    "animation",
+    "blur",
+    "transition"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

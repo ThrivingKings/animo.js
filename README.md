@@ -1,5 +1,5 @@
 # NO LONGER BEING SUPPORTED
-Please use https://github.com/ThrivingKings/animo instead
+Please consider https://github.com/ThrivingKings/animo instead
 
 animo.js
 ========
